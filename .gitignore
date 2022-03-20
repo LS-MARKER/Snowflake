@@ -27,3 +27,6 @@ hs_err_pid*
 
 # StartUp
 /src/main/java/com/github/hexdude/App.java
+
+# Test
+/src/test/java/com/github/hexdude/core/CoreTest.java
