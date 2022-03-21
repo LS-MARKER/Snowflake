@@ -80,7 +80,7 @@ After refer this package to your own project and configuration. You still need s
        @Id
        @GeneratedValue(generator = "hexGen")
        //Declarition below 'strategy' must be strict same sa this.
-       @GenericGenerator(name = "hexGen", strategy = "com.github.hexdude.generator.[JPA](https://spring.io/projects/spring-data-jpa)Generator")
+       @GenericGenerator(name = "hexGen", strategy = "com.github.hexdude.generator.JPAGenerator")
        private String id;
        
        private String firstName;
