@@ -10,10 +10,11 @@
     <description>A Distribute system primary key generating strategy for JPA(Hibernate) and Mybatis developed base on @Twitter SnowFlake.</description>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <spring.boot.version>2.6.4</spring.boot.version>
         <hibernate.version>5.6.7.Final</hibernate.version>
+        <mybatisPlus.version>3.5.1</mybatisPlus.version>
     </properties>
 
     <dependencies>
@@ -40,6 +41,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisPlus.version}</version>
         </dependency>
     </dependencies>
 </project>
