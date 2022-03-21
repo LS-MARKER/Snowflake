@@ -41,7 +41,7 @@ public enum Core {
         }
     }
 
-    public synchronized Long generate() throws InterruptedException {
+    public synchronized Long generate() {
         long currentTime = System.currentTimeMillis();
 
         /*
@@ -50,7 +50,7 @@ public enum Core {
          * successfully generated,May means it occurs interrupt exception.
          */
         if (currentTime < property.getLastTimeStamp()) {
-            throw new InterruptedException("SnowFlake occurs interrupt execption. Thread -> " + Thread.currentThread().getName());
+            throw new RuntimeException("SnowFlake occurs interrupt execption. Thread -> " + Thread.currentThread().getName());
         }
 
         /*当当前线程获得的系统时间与上一次成功生成时间一致，则说明在单位时间内，需要对生成的ID进行标识。*/
@@ -97,5 +97,4 @@ public enum Core {
         }
         return currentTime;
     }
-
 }
