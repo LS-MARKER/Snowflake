@@ -1,0 +1,3 @@
+#Enable AUTO INJECT DEFINED BEANS TO TARGET CONTAINER
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.hexdude.property.Configuration
